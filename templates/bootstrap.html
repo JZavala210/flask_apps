@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+
+    {{ bootstrap.load_css() }}
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Juan's Flask App</span>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 text-center">
+      <h1>Bootstrap Starter Page</h1>
+      <p class="lead">This is my Task 5 page using Bootstrap.</p>
+
+      <!-- Image -->
+      <img src="{{ url_for('static', filename='images/lab16_image.jpg') }}" 
+           class="img-fluid w-50 mt-3">
+
+      <!-- Button -->
+      <div class="mt-4">
+        <a href="/" class="btn btn-primary">Go Home</a>
+      </div>
+    </div>
+
+    {{ bootstrap.load_js() }}
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+
+    <h3> My image: </h3>
+
+    <div class="text-center">
+        <img src="/static/images/lab16_image.jpg " class="img-fluid w-50">
+    </div>
+
+    <br>
+
+    <h3> My Dictionary info: </h3> <br> 
+
+    <ul>
+        {% for position, player in dictionary.items() %}
+            <li><strong>{{ position }}</strong>: {{ player }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+
+   <div class="container text-center mt-5">
+
+        <h1 class="mb-4">Random Negative Image</h1>
+
+        <img src="{{ url_for('static', filename=image_file) }}" 
+             class="img-fluid rounded shadow w-50">
+
+        <br><br>
+
+    </div>
+</body>
+</html>
