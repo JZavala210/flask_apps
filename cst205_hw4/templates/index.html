@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+    <h1>Juan's Random Picture Gallery </h1>
+
+    {% for img in images %}
+    <div class="mb-4">
+
+        <h3>
+            <!-- Link the image title to the detail page for that image -->
+            <a href="{{ url_for('detail', image_id=img.id) }}">
+                {{ img.title }}
+            </a>
+        </h3>
+
+        <!-- Link the image to the detail page for that image when clicked -->
+        <a href="{{ url_for('detail', image_id=img.id) }}">
+            <img src="{{ url_for('static', filename='images/' + img.id + '.jpg') }}" style="width: 250px;">
+        </a>
+
+
+    </div>
+{% endfor %}
+</body>
+</html>

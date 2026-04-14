@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>CST 205 Playlist</title>
+      {{ bootstrap.load_css() }}
+  </head>
+<body>
+    <div class="container mb-4">  
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">Add to our playlist!</h2>
+          <form method="POST" action="/">
+            {{ form.csrf_token }}
+
+            <div> 
+            {{ form.song_title.label }} 
+            {{ form.song_title(size=32) }}
+            </div>
+
+            <!-- Artist Name Field -->
+            <div>
+            {{ form.artist_name.label }} 
+            {{ form.artist_name(size=32) }}
+
+            </div>
+            
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <img src="../static/images/song_meme.webp" class="img-fluid w-50 mx-auto d-block">
+</body>
+</html>

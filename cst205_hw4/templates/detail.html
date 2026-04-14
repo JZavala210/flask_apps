@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+    <h1> {{ image.title }} by {{ image.flickr_user }} </h1>
+
+    <img src="/static/images/{{image.id}}.jpg" class="w-50" />
+     <br> 
+
+    <h3> {{mode}} image in {{image_format}} with width {{width}} and height {{height}}. <h3> 
+
+    <br>
+     <a href="{{ url_for('index') }}">Back to list of images</a>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+    <div class="container mt-4">
+    <h2>Search Results</h2>
+
+    {% if results %}
+        {% for song in results %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    
+                    <h5>{{ song.trackName }}</h5>
+                    <p>{{ song.artistName }}</p>
+
+                    <img src="{{ song.artworkUrl100 }}" alt="album art">
+
+                    <br><br>
+
+                    <audio controls>
+                        <source src="{{ song.previewUrl }}" type="audio/mpeg">
+                    </audio>
+
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+</body>
+</html>

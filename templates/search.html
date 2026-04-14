@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     {{ bootstrap.load_css() }}
+</head>
+<body>
+    <div class="container mb-4">  
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">Search a Artist!</h2>
+          <form action="/search" method="get">
+            <input type="text" name="artist_name" placeholder="Search for music">
+            <button type="submit">Search</button>
+        </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
